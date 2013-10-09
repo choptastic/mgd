@@ -41,7 +41,7 @@ You don't need to think too hard about this one, since the above step tells you
 almost exactly what to do when the installation process completes.
 
 ```bash
-git remote add live <username>@<servername>/path/to/git
+git remote add live <username>@<servername>/path/to/git/projectname.git
 git push live master
 ```
 
