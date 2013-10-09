@@ -33,6 +33,6 @@ else
 	echo ""
 	echo "********************************"
 	echo "Created $APP from $1"
-	echo "Two more steps on your workstation:\n1) git remote add live ssh://<SERVERNAME>$GIT\n2) git push live master"
+	echo "Two more steps on your workstation:\n1) git remote add live `whoami`@<SERVERNAME>:$GIT\n2) git push live master"
 	echo "********************************"
 fi
