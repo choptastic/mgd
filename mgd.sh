@@ -20,7 +20,7 @@ else
 	mkdir -p $GIT
 	cd $GIT
 	git init --bare
-	echo "#!/bin/sh\nGIT_WORK_TREE=$APP git checkout -f" > hooks/post-receive
+	echo -e "#!/bin/sh\nGIT_WORK_TREE=$APP git checkout -f" > hooks/post-receive
 	chmod +x hooks/post-receive
 	cd $TMP
 	git init
@@ -33,6 +33,8 @@ else
 	echo ""
 	echo "********************************"
 	echo "Created $APP from $1"
-	echo "Two more steps on your workstation:\n1) git remote add live `whoami`@<SERVERNAME>:$GIT\n2) git push live master"
+	echo "Two more steps on your workstation:"
+	echo "1) git remote add live `whoami`@<SERVERNAME>:$GIT"
+	echo "2) git push live master"
 	echo "********************************"
 fi
