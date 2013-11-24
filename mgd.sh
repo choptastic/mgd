@@ -20,7 +20,7 @@ else
 	mkdir -p $GIT
 	cd $GIT
 	git init --bare
-	echo -e "#!/bin/sh\nGIT_WORK_TREE=$APP git checkout -f" > hooks/post-receive
+	printf "#!/bin/sh\nGIT_WORK_TREE=$APP git checkout -f" > hooks/post-receive
 	chmod +x hooks/post-receive
 	cd $TMP
 	git init
