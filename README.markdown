@@ -14,17 +14,28 @@ exactly something you want to tell anyone about
 
 On your server:
 ```bash
-git clone git://github.com/choptastic/mgd
+git clone https://github.com/choptastic/mgd
 cd mgd
 sudo make install
 ```
 
 ## Setting up a repository
 
-On your server:
-```bash
-mgd git://github.com/yourname/projectname.git
-```
+### On your server:
+
+* For Public Repos
+
+  ```bash
+  mgd https://github.com/yourname/projectname.git
+  ```
+
+* For Private Repos
+
+  ```bash
+  mgd git@github.com:yourname/projectname.git
+  ```
+
+### Once The above is finished
 
 * The app itself will be placed into apps/projectname
 * The bare git repo will be placed into git/projectname.git
